@@ -6,8 +6,8 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
 	
-	case 'login' :
-		$content 	= 'login.php';
+	case 'profile' :
+		$content 	= 'profile.php';
 		$template	= '../include/template.php';
 		break;
 			
