@@ -55,6 +55,28 @@ function login()
 	
 }
 
+function register()
+{
+	$username = $_POST['username'];
+	$full_name = $_POST['full_name'];
+	$password = $_POST['password'];
+	$password2 = $_POST['password2'];
+	
+		if (user_exist($username)!=true){
+			if ($password == $password2){
+				mysql_query("insert into user set username='$username',
+												full_name='$full_name',
+												password='$password'");
+
+				header('Location: ../home/');
+			}else{
+				header('Location: index.php?view=register&error=Password not matched');
+			}
+
+		}else{
+			header('Location: index.php?view=register&error=Username already exists.');
+		}
+}
 
 function logout()
 

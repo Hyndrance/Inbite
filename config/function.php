@@ -1,7 +1,7 @@
 <?php
 
-function user_exist($idnumber){
-	$query = mysql_query("select * from user where idnumber='$idnumber'");
+function user_exist($username){
+	$query = mysql_query("select * from user where username='$username'");
 	if (mysql_num_rows($query)>0){
 		return true;
 	}else{

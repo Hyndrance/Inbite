@@ -1,6 +1,5 @@
 <?php
 $username = $_SESSION["user_session"];
-
 ?>
 
 <h1>header </h1>

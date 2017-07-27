@@ -10,6 +10,11 @@ switch ($view) {
 		$content 	= 'profile.php';
 		$template	= '../include/template.php';
 		break;
+		
+	case 'register' :
+		$content 	= 'register.php';
+		$template	= '../include/template_login.php';
+		break;
 			
 	default :
 		$content 	= 'login.php';
