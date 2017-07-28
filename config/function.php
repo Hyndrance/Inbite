@@ -10,6 +10,13 @@ function user_exist($username){
 }
 
 
+function fullname($username){
+	$query = mysql_query("select * from user where username='$username'");
+	$get = mysql_fetch_array($query);
+	return $get['full_name'];
+}
+
+
 
 function buildProctorOptions($catId = 0)
 {

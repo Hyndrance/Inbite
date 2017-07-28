@@ -6,4 +6,4 @@ extract($row);
 
 <?=$full_name;?> <br>
 <?=$username;?> <br>
-<a href="?view=modify">Modify</a>
+<a href="?view=modify">Update</a>
