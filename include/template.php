@@ -1,6 +1,10 @@
 <?php
 $username = $_SESSION['user_session'];
 
+$query = mysql_query("select * from user where username='$username'");
+$row = mysql_fetch_array($query);
+extract($row);
+
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +14,7 @@ $username = $_SESSION['user_session'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>Inbite</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -37,12 +41,12 @@ $username = $_SESSION['user_session'];
     <link href="../include/md/css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
-<body class="theme-red">
+<body class="theme-green">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
-                <div class="spinner-layer pl-red">
+                <div class="spinner-layer pl-green">
                     <div class="circle-clipper left">
                         <div class="circle"></div>
                     </div>
@@ -75,7 +79,7 @@ $username = $_SESSION['user_session'];
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">inbite</a>
+                <a class="navbar-brand" href="index.html">Remember Me</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -285,17 +289,13 @@ $username = $_SESSION['user_session'];
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=fullname($username)?></div>
-                    <div class="email">john.doe@example.com</div>
+                    <div class="email"><?=$email?></div>
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>View Profile</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                            <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="../user/process.php?action=logout"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -306,9 +306,9 @@ $username = $_SESSION['user_session'];
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="active">
-                        <a href="../wall">
+                        <a href="../home">
                             <i class="material-icons">home</i>
-                            <span>Wall</span>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
@@ -356,6 +356,24 @@ $username = $_SESSION['user_session'];
                                 </ul>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="../like">
+                            <i class="material-icons">home</i>
+                            <span>Likes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../follower">
+                            <i class="material-icons">home</i>
+                            <span>Followers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../following">
+                            <i class="material-icons">home</i>
+                            <span>Following</span>
+                        </a>
                     </li>
             </div>
             <!-- #Menu -->

@@ -59,23 +59,34 @@ function register()
 {
 	$username = $_POST['username'];
 	$full_name = $_POST['full_name'];
+	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$password2 = $_POST['password2'];
 	
-		if (user_exist($username)!=true){
-			if ($password == $password2){
+	
+		if (user_exist($username)){
+			
+			header('Location: index.php?view=register&error=Username already exists.');
+		}
+		else if (email_exist($email)){
+			
+			header('Location: index.php?view=register&error=Email already exists.');
+		}
+		else if ($password != $password2){
+			
+			header('Location: index.php?view=register&error=Password do not match.');
+		}
+	
+		else {
 				mysql_query("insert into user set username='$username',
+												email='$email',
 												full_name='$full_name',
 												password='$password'");
 
+				$_SESSION['user_session'] = $username;
+				
 				header('Location: ../home/');
-			}else{
-				header('Location: index.php?view=register&error=Password not matched');
 			}
-
-		}else{
-			header('Location: index.php?view=register&error=Username already exists.');
-		}
 }
 
 function logout()
