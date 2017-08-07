@@ -9,6 +9,15 @@ function user_exist($username){
 	}
 }
 
+function email_exist($email){
+	$query = mysql_query("select * from user where email='$email'");
+	if (mysql_num_rows($query)>0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 
 function fullname($username){
 	$query = mysql_query("select * from user where username='$username'");
