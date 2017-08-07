@@ -11,8 +11,11 @@ switch ($action) {
 	case 'add':
 		add();
 		break;
+		
+	case 'addComment':
+		addComment();
+		break;
 
-	
 	default :
 }
 
@@ -47,6 +50,23 @@ function add()
 		
 	header('Location: ../home/?error=Not uploaded');
 	}
+	
+}
+function addComment()
+{
+	$post_id = $_POST['post_id'];
+	$content = $_POST['content'];
+	$username = $_POST['username'];
+	
+	
+	mysql_query("insert into comment set user='$username',
+											post_id='$post_id',
+											content='$content',
+											create_datetime=NOW()");
+							
+		
+	header('Location: ../home/');
+	
 	
 }
 

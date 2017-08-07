@@ -1,5 +1,3 @@
-Inbit Welcome Page!
-
 <?php
 include "add.php"
 ?>
