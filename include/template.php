@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 $username = $_SESSION['user_session'];
 
@@ -611,5 +612,4 @@ extract($row);
     <script src="../include/md/js/pages/forms/advanced-form-elements.js"></script>
 
 </body>
-
 </html>
