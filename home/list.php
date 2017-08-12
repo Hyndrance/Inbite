@@ -27,13 +27,13 @@ $Id = $row['Id'];
 				</h2>
 				
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<small>Posted by - <a href="" target="_blank"><?=$row['user'];?></a></small>
+					<small>Posted by - <a href="../profile/?user=<?=$row['user'];?>" ><?=$row['user'];?></a></small>
 				</div>
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 					<small><i class="material-icons col-pink">favorite</i></small>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-					30 likes
+					30 bites
 				</div>
 				<br>		
 				

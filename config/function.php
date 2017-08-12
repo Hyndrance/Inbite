@@ -9,6 +9,15 @@ function user_exist($username){
 	}
 }
 
+function checkFollow($follower, $following){
+	$query = mysql_query("select * from follow where follower='$follower' and following = '$following'");
+	if (mysql_num_rows($query)>0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function email_exist($email){
 	$query = mysql_query("select * from user where email='$email'");
 	if (mysql_num_rows($query)>0){

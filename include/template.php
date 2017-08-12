@@ -6,6 +6,10 @@ $query = mysql_query("select * from user where username='$username'");
 $row = mysql_fetch_array($query);
 extract($row);
 
+if(file_exists("../media/".$image) && $image!="")
+	$displayImage = "../media/".$image;
+else
+	$displayImage = "../include/images/no-image.jpg";
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +47,7 @@ extract($row);
 </head>
 
 <body class="theme-green">
-    <!-- Page Loader -->
+    <!-- Page Loader
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
@@ -58,7 +62,7 @@ extract($row);
             </div>
             <p>Please wait...</p>
         </div>
-    </div>
+    </div> -->
     <!-- #END# Page Loader -->
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -80,7 +84,7 @@ extract($row);
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">Remember Me</a>
+                <a class="navbar-brand" href="index.html">Inbite</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -286,7 +290,7 @@ extract($row);
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="../include/md/images/user.png" width="48" height="48" alt="User" />
+                    <img src="../media/<?=$displayImage;?>" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=fullname($username)?></div>
