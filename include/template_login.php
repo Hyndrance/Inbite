@@ -47,5 +47,4 @@
     <script src="../include/md/js/pages/examples/sign-in.js"></script>
 </body>
 
->>>>>>> hyndrance/master
 </html>

@@ -5,7 +5,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 
 <div class="logo">
             <a href="javascript:void(0);">Inbite</a>
-            <small>Lorem ipsun</small>
+            <small>Share! Bite! Invite!</small>
         </div>
         <div class="card">
             <div class="body">
