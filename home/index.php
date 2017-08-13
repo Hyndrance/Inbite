@@ -6,13 +6,18 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
 	
-	case 'register' :
-		$content 	= 'register.php';
+	case 'add' :
+		$content 	= 'add.php';
+		$template	= '../include/template.php';
+		break;
+	
+	case 'test' :
+		$content 	= 'test.php';
 		$template	= '../include/template.php';
 		break;
 			
 	default :
-		$content 	= 'home.php';
+		$content 	= 'list.php';
 		$template	= '../include/template.php';
 }
 

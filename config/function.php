@@ -1,5 +1,26 @@
 <?php
 
+function bittenByYou($username, $Id){
+	$query = mysql_query("select * from bite where biter='$username' and post_id=$Id");
+	if (mysql_num_rows($query)>0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+function countBites($Id){
+	$query = mysql_query("select * from bite where post_id=$Id");
+	return mysql_num_rows($query);
+
+}
+
+function getImage($username){
+	$query = mysql_query("select * from user where username='$username'");
+	$get = mysql_fetch_array($query);
+	return $get['image'];
+}
+
 function user_exist($username){
 	$query = mysql_query("select * from user where username='$username'");
 	if (mysql_num_rows($query)>0){

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 $username = $_SESSION['user_session'];
 
@@ -30,6 +29,25 @@ else
     <!-- Bootstrap Core Css -->
     <link href="../include/md/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+	
+	<!-- Multi Select Css -->
+	<link href="../include/md/plugins/multi-select/css/multi-select.css" rel="stylesheet">
+	
+	<!-- Bootstrap Spinner Css -->
+	<link href="../include/md/plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
+	
+    <!-- Sweetalert Css -->
+    <link href="../include/md/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+	
+	<!-- Bootstrap Tagsinput Css -->
+	<link href="../include/md/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+	
+	<!-- Bootstrap Select Css -->
+	<link href="../include/md/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
+	
+	<!-- noUISlider Css -->
+	<link href="../include/md/plugins/nouislider/nouislider.min.css" rel="stylesheet">
+	
     <!-- Waves Effect Css -->
     <link href="../include/md/plugins/node-waves/waves.css" rel="stylesheet" />
 
@@ -317,51 +335,12 @@ else
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">widgets</i>
-                            <span>Widgets</span>
+                        <a href="../home/?view=add">
+                            <i class="material-icons">home</i>
+                            <span>Post</span>
                         </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="javascript:void(0);" class="menu-toggle">
-                                    <span>Cards</span>
-                                </a>
-                                <ul class="ml-menu">
-                                    <li>
-                                        <a href="pages/widgets/cards/basic.html">Basic</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/widgets/cards/colored.html">Colored</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/widgets/cards/no-header.html">No Header</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" class="menu-toggle">
-                                    <span>Infobox</span>
-                                </a>
-                                <ul class="ml-menu">
-                                    <li>
-                                        <a href="pages/widgets/infobox/infobox-1.html">Infobox-1</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/widgets/infobox/infobox-2.html">Infobox-2</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/widgets/infobox/infobox-3.html">Infobox-3</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/widgets/infobox/infobox-4.html">Infobox-4</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/widgets/infobox/infobox-5.html">Infobox-5</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
                     </li>
+                    
                     <li>
                         <a href="../like">
                             <i class="material-icons">home</i>
@@ -369,13 +348,13 @@ else
                         </a>
                     </li>
                     <li>
-                        <a href="../follower">
+                        <a href="../follow/?view=follower">
                             <i class="material-icons">home</i>
                             <span>Followers</span>
                         </a>
                     </li>
                     <li>
-                        <a href="../following">
+                        <a href="../follow/?view=following">
                             <i class="material-icons">home</i>
                             <span>Following</span>
                         </a>

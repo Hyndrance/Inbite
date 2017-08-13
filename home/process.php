@@ -16,10 +16,28 @@ switch ($action) {
 		addComment();
 		break;
 
+	case 'bite':
+		bite();
+		break;
+		
 	default :
 }
 
-
+function bite()
+{
+	$Id = $_GET['Id'];
+	$username = $_GET['username'];
+	
+	
+	mysql_query("insert into bite set biter='$username',
+											post_id=$Id,
+											create_datetime=NOW()");
+							
+		
+	header('Location: ../home/#'.$Id);
+	
+	
+}
 
 function add()
 {
