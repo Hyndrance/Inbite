@@ -1,7 +1,6 @@
 <?php
 $commentQuery = mysql_query("select * from comment where post_id=$Id order by Id desc");
 
-
 ?>
 
 <div class="body">

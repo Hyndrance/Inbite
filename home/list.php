@@ -44,10 +44,10 @@ $Id = $row['Id'];
 		<div style="width: 80%; height: 1px; background-color: #c2c2c2; margin: 0 auto; margin-bottom: 10px;"></div>
 
 		<div style="width: 80%; height: 25px; margin: 0 auto;">
-					<?php if(bittenByYou($username, $Id)){?>	
-						<i class="material-icons col-pink" style="font-size: 12pt; cursor:pointer;">restaurant</i>
+					<?php if(bittenByYou($username, $Id)){?>
+						<img src="../include/images/inbitecolored.png" style="margin-top: -10px;">
 							<?php } else {?>
-									<i class="material-icons" style="font-size: 12pt; cursor:pointer;" onclick="location.href='process.php?action=bite&Id=<?=$Id;?>&username=<?=$username;?>'">restaurant</i>
+								<img src="../include/images/inbitelogo.png" style="margin-top: -10px; cursor:pointer;" onclick="location.href='process.php?action=bite&Id=<?=$Id;?>&username=<?=$username;?>'">
 							<?php }?>
 			
 			<div style="display: inline-block; font-size: 9pt;px; position: absolute;">
