@@ -15,9 +15,17 @@ switch ($action) {
 	case 'addComment':
 		addComment();
 		break;
+		
+	case 'delete':
+		delete();
+		break;
 
 	case 'bite':
 		bite();
+		break;
+
+	case 'join_now':
+		join_now();
 		break;
 		
 	default :
@@ -34,9 +42,21 @@ function bite()
 											create_datetime=NOW()");
 							
 		
-	header('Location: ../home/#'.$Id);
+	header('Location: ../home/#'.$Id);	
+}
+
+function join_now()
+{
+	$Id = $_GET['Id'];
+	$username = $_GET['username'];
 	
 	
+	mysql_query("insert into join_now set user='$username',
+											post_id=$Id,
+											create_datetime=NOW()");
+							
+		
+	header('Location: ../home/#'.$Id);	
 }
 
 function add()
@@ -86,6 +106,15 @@ function addComment()
 	header('Location: ../home/');
 	
 	
+}
+
+function delete()
+{
+	$Id = $_GET['id'];
+	
+		mysql_query("delete from activity where Id=$Id");
+		
+		header('Location: index.php?success=You have deleted your post.');
 }
 
 ?>

@@ -31,9 +31,8 @@ $Id = $row['Id'];
 						<i class="material-icons">more_vert</i>
 					</a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="javascript:void(0);">Action</a></li>
-						<li><a href="javascript:void(0);">Another action</a></li>
-						<li><a href="javascript:void(0);">Something else here</a></li>
+						<li><a href="javascript:void(0);">Update</a></li>
+						<li><a href="process.php?action=delete&id=<?=$Id;?>">Delete</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -44,16 +43,23 @@ $Id = $row['Id'];
 		<div style="width: 80%; height: 1px; background-color: #c2c2c2; margin: 0 auto; margin-bottom: 10px;"></div>
 
 		<div style="width: 80%; height: 25px; margin: 0 auto;">
-					<?php if(bittenByYou($username, $Id)){?>
-						<img src="../include/images/inbitecolored.png" style="margin-top: -10px;">
-							<?php } else {?>
-								<img src="../include/images/inbitelogo.png" style="margin-top: -10px; cursor:pointer;" onclick="location.href='process.php?action=bite&Id=<?=$Id;?>&username=<?=$username;?>'">
-							<?php }?>
+			<?php if(bittenByYou($username, $Id)){?>
+				<img src="../include/images/inbitecolored.png" style="margin-top: -10px;">
+					<?php } else {?>
+						<img src="../include/images/inbitelogo.png" style="margin-top: -10px; cursor:pointer;" onclick="location.href='process.php?action=bite&Id=<?=$Id;?>&username=<?=$username;?>'">
+					<?php }?>
 			
 			<div style="display: inline-block; font-size: 9pt;px; position: absolute;">
 								<?=countBites($Id)?> bite(s)</div>
-			<i class="material-icons" style="font-size: 12pt; margin-left: 100px; cursor:pointer;">mail_outline</i>
-			<div style="display: inline-block; font-size: 9pt;  position: absolute; margin-left: 4px;">Join now</div>
+			
+			<?php if(joinByYou($username, $Id)){?>
+			<i class="material-icons col-pink" style="font-size: 12pt; margin-left: 100px; cursor:pointer;">mail_outline</i>
+					<?php } else {?>
+						<i class="material-icons" style="font-size: 12pt; margin-left: 100px; cursor:pointer;" onclick="location.href='process.php?action=join_now&Id=<?=$Id;?>&username=<?=$username;?>'">mail_outline</i>
+					<?php }?>
+			
+			<div style="display: inline-block; font-size: 9pt;px; position: absolute;">
+								&nbsp;<?=countJoins($Id)?> Join(s)</div>
 		</div>
 
 		<div class="input-group" style="width: 80%; margin: 0 auto;">

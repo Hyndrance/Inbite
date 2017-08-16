@@ -47,24 +47,27 @@ function update()
 		}
 	
 		else {
-				mysql_query("update user  set email='$email',
+			
+				if ($_FILES['upload_file']['name']){
+					
+					move_uploaded_file($_FILES['upload_file']['tmp_name'], "../media/" . $newfilename);
+					mysql_query("update user  set email='$email',
 												full_name='$full_name',
 												password='$password',
 												image='$newfilename'
 												where username='$username'");
+				}
+				else{
+					
+					mysql_query("update user  set email='$email',
+												full_name='$full_name',
+												password='$password'
+												where username='$username'");
+				}
 				
-				
-					if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../media/" . $newfilename)) {
 							
 						header('Location: ../profile/');
-						}
-						else{
-							
-						header('Location: index.php?view=update&error=Image not uploaded. Please choose another one.');
-						}
-				
-				
-				
+						
 			}
 }
 

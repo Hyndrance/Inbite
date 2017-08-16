@@ -1,3 +1,11 @@
+<?php
+$checkSession = (isset($_SESSION['user_session']) && $_SESSION['user_session'] != '') ? $_SESSION['user_session'] : '';
+if ($checkSession){
+
+	header("Location: ../home/");	
+}
+?>
+
 <!DOCTYPE html>
 <html>
 

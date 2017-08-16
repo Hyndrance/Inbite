@@ -1,5 +1,10 @@
 <?php
 
+function countNotification($username){
+	$query = mysql_query("select * from notification where receiver='$username'");
+	return mysql_num_rows($query);
+}
+
 function bittenByYou($username, $Id){
 	$query = mysql_query("select * from bite where biter='$username' and post_id=$Id");
 	if (mysql_num_rows($query)>0){
@@ -11,6 +16,21 @@ function bittenByYou($username, $Id){
 
 function countBites($Id){
 	$query = mysql_query("select * from bite where post_id=$Id");
+	return mysql_num_rows($query);
+
+}
+
+function joinByYou($username, $Id){
+	$query = mysql_query("select * from join_now where user='$username' and post_id=$Id");
+	if (mysql_num_rows($query)>0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+function countJoins($Id){
+	$query = mysql_query("select * from join_now where post_id=$Id");
 	return mysql_num_rows($query);
 
 }
@@ -54,8 +74,6 @@ function fullname($username){
 	$get = mysql_fetch_array($query);
 	return $get['full_name'];
 }
-
-
 
 function buildProctorOptions($catId = 0)
 {

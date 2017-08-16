@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2017-08-12 21:39:19
+# Date: 2017-08-16 23:23:43
 # Generator: MySQL-Front 6.0  (Build 1.159)
 
 
@@ -16,13 +16,13 @@ CREATE TABLE `activity` (
   `location` varchar(255) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "activity"
 #
 
-INSERT INTO `activity` VALUES (1,'dale','asdf','file','bacolod','2017-07-28 20:05:22'),(2,'dale','hahaha','asdf','bacolod','2017-07-28 20:10:22'),(3,'admin','kjdflsdkfhlsdkfs','1501244192.jpg','bacolod','2017-07-28 20:16:32'),(4,'admin','sample lang ni nga post','1501245938.jpg','bacolod','2017-07-28 20:45:37'),(5,'admin','I can not upload','1501246011.','bacolod','2017-07-28 20:46:50'),(6,'admin','eat like crazy!','1501252857.jpg','bacolod','2017-07-28 22:40:57'),(7,'admin','hello','1501254552.jpg','bacolod','2017-07-28 23:09:12'),(8,'admin','hehe','1501254650.jpg','bacolod','2017-07-28 23:10:49'),(9,'admin','yut','1501254685.jpg','bacolod','2017-07-28 23:11:24'),(10,'admin','Best Cake ever! ','1501326070.jpg','bacolod','2017-07-29 19:01:10'),(11,'admin','','1501326107.','bacolod','2017-07-29 19:01:46'),(12,'admin','Loving the beef! ','1501326153.jpg','bacolod','2017-07-29 19:02:32'),(13,'fredowinz23','dslfmds ldskfkldsf ksdlnfdsklfndsfklndsf\r\nsdfdslkfndsflkndf\r\ndfsdfmdsfsd\r\nfdsfdsfdsfddsf\r\ns ndsflkdsfklnsd klnsd kldnsf kldsf klsdnf n fk\r\ndsfdslkfndsflkndsflds\r\ndsflndskfnsdflkndskldnskl dslkfdslk ds fds flsdjl sdf\r\nf sdiofds fiosfds fds fds ods fsd\r\nsd fdsf ds ds dsds dsfi dio sdiof dsifods fiosd fids ds   iods dsio dsi dsiof sd','1502020431.','bacolod','2017-08-06 19:53:51');
+INSERT INTO `activity` VALUES (2,'admin','try me!','1502894266.jpg','bacolod','2017-08-16 22:37:46');
 
 #
 # Structure for table "bite"
@@ -35,12 +35,13 @@ CREATE TABLE `bite` (
   `biter` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "bite"
 #
 
+INSERT INTO `bite` VALUES (1,'18','fredowinz23','2017-08-13 18:46:09'),(2,'17','fredowinz23','2017-08-13 18:47:52'),(3,'16','fredowinz23','2017-08-13 18:48:07'),(4,'15','fredowinz23','2017-08-13 18:48:58'),(5,'11','fredowinz23','2017-08-13 18:49:06'),(6,'10','fredowinz23','2017-08-13 18:50:59'),(7,'17','admin','2017-08-13 22:18:12'),(8,'20','admin','2017-08-13 22:18:23'),(9,'16','admin','2017-08-16 19:15:02'),(10,'16','admin','2017-08-16 19:15:02'),(11,'19','admin','2017-08-16 19:15:07'),(12,'18','admin','2017-08-16 19:19:03'),(13,'12','admin','2017-08-16 19:19:30'),(14,'1','admin','2017-08-16 22:09:23'),(15,'2','admin','2017-08-16 22:48:07');
 
 #
 # Structure for table "comment"
@@ -54,13 +55,13 @@ CREATE TABLE `comment` (
   `content` text,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "comment"
 #
 
-INSERT INTO `comment` VALUES (1,1,'fred123','I like this food','2017-08-05 19:14:10'),(2,1,'anne23','yeah right','2017-08-05 19:18:23'),(3,1,'admin','kldsnmflkdsnfdskl','2017-08-06 19:26:19'),(4,12,'admin','ds,fsdmlfnsdmfl','2017-08-06 19:26:27'),(5,12,'admin','heller','2017-08-06 19:29:18'),(6,12,'admin','how are you?','2017-08-06 19:45:44'),(7,13,'admin','klsdfsdk edkflhsdkfhfklsd','2017-08-06 20:44:12'),(8,13,'fred','lksdfhlksdfhsl','2017-08-08 00:26:51'),(9,9,'fred','klsdfhksdlfhlsdkfh','2017-08-08 00:28:59');
+INSERT INTO `comment` VALUES (1,1,'fred123','I like this food','2017-08-05 19:14:10'),(2,1,'anne23','yeah right','2017-08-05 19:18:23'),(3,1,'admin','kldsnmflkdsnfdskl','2017-08-06 19:26:19'),(4,12,'admin','ds,fsdmlfnsdmfl','2017-08-06 19:26:27'),(5,12,'admin','heller','2017-08-06 19:29:18'),(6,12,'admin','how are you?','2017-08-06 19:45:44'),(7,13,'admin','klsdfsdk edkflhsdkfhfklsd','2017-08-06 20:44:12'),(8,13,'fred','lksdfhlksdfhsl','2017-08-08 00:26:51'),(9,9,'fred','klsdfhksdlfhlsdkfh','2017-08-08 00:28:59'),(10,21,'admin','asdasdsa','2017-08-16 19:27:46');
 
 #
 # Structure for table "follow"
@@ -73,13 +74,32 @@ CREATE TABLE `follow` (
   `following` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "follow"
 #
 
-INSERT INTO `follow` VALUES (3,'admin','fredowinz23','2017-08-12 21:01:40');
+INSERT INTO `follow` VALUES (3,'admin','fredowinz23','2017-08-12 21:01:40'),(4,'fredowinz23','admin','2017-08-13 17:05:19');
+
+#
+# Structure for table "join_now"
+#
+
+DROP TABLE IF EXISTS `join_now`;
+CREATE TABLE `join_now` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` varchar(11) DEFAULT NULL,
+  `user` varchar(20) DEFAULT NULL,
+  `create_datetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+#
+# Data for table "join_now"
+#
+
+INSERT INTO `join_now` VALUES (1,'2','admin','2017-08-16 22:47:00');
 
 #
 # Structure for table "notification"
@@ -88,7 +108,8 @@ INSERT INTO `follow` VALUES (3,'admin','fredowinz23','2017-08-12 21:01:40');
 DROP TABLE IF EXISTS `notification`;
 CREATE TABLE `notification` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `reciever` varchar(20) DEFAULT NULL,
+  `receiver` varchar(20) DEFAULT NULL,
+  `doer` varchar(20) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   `link` varchar(255) DEFAULT NULL,
@@ -100,6 +121,7 @@ CREATE TABLE `notification` (
 # Data for table "notification"
 #
 
+INSERT INTO `notification` VALUES (1,'admin','fredowinz23','followed you!','follow','','2017-08-16 22:57:18'),(2,'admin','fredowinz23','Nice!','comment','','2017-08-16 22:57:39'),(3,'admin','fredowinz23','Nice!','bite','','2017-08-16 22:57:47'),(4,'admin','fredowinz23','Nice!','join','','2017-08-16 22:57:52');
 
 #
 # Structure for table "user"
@@ -120,4 +142,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'dale torre','admin','dale@torre.com','12345','1502541884.jpg'),(2,'fred ciagar','user',NULL,'12345',NULL),(3,'hehehe','hahah',NULL,'12345',NULL),(5,'admi','admi',NULL,'123',NULL),(6,'dskifndslif nldskfndsklfnsdklfsdnlk','correctuser',NULL,'12121212',NULL),(7,'james reid','james23',NULL,'123456',NULL),(8,'dsklfjsdlk jdsklfj sdklfjs fj','sddfdsfs','aa@aa.com','12121212',NULL),(9,'dsklfndskl ndsfklns kls','dsklfnsdklfj sdklfnsdklsdnklfn lsdk','ww@ww.com','123456',NULL),(10,'sklfjdskl ksdlfjdsklfj sdkl','gggg','ff@ff.com','123456',NULL),(11,'fred garcia','fredowinz23','fred@garcia.com','12345',NULL);
+INSERT INTO `user` VALUES (1,'Inbite Admin','admin','support@inbite.com','12345','1502892528.png'),(2,'fred ciagar','user',NULL,'12345',NULL),(3,'hehehe','hahah',NULL,'12345',NULL),(5,'admi','admi',NULL,'123',NULL),(6,'dskifndslif nldskfndsklfnsdklfsdnlk','correctuser',NULL,'12121212',NULL),(7,'james reid','james23',NULL,'123456',NULL),(8,'dsklfjsdlk jdsklfj sdklfjs fj','sddfdsfs','aa@aa.com','12121212',NULL),(9,'dsklfndskl ndsfklns kls','dsklfnsdklfj sdklfnsdklsdnklfn lsdk','ww@ww.com','123456',NULL),(10,'sklfjdskl ksdlfjdsklfj sdkl','gggg','ff@ff.com','123456',NULL),(11,'fred garcia','fredowinz23','fred@garcia.com','12345',NULL);
