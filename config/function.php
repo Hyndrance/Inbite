@@ -35,6 +35,12 @@ function countJoins($Id){
 
 }
 
+function getDoer($postId){
+	$query = mysql_query("select * from activity where id=$postId");
+	$get = mysql_fetch_array($query);
+	return $get['user'];
+}
+
 function getImage($username){
 	$query = mysql_query("select * from user where username='$username'");
 	$get = mysql_fetch_array($query);

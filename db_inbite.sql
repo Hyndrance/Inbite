@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2017-08-16 23:23:43
+# Date: 2017-08-16 23:33:05
 # Generator: MySQL-Front 6.0  (Build 1.159)
 
 
@@ -22,7 +22,7 @@ CREATE TABLE `activity` (
 # Data for table "activity"
 #
 
-INSERT INTO `activity` VALUES (2,'admin','try me!','1502894266.jpg','bacolod','2017-08-16 22:37:46');
+INSERT INTO `activity` VALUES (2,'admin','try me!','1502894266.jpg','bacolod','2017-08-16 22:37:46'),(3,'admin','hehe','1502897473.jpg','bacolod','2017-08-16 23:31:12'),(4,'admin','hahaha','1502897552.jpg','bacolod','2017-08-16 23:32:31');
 
 #
 # Structure for table "bite"
@@ -41,7 +41,7 @@ CREATE TABLE `bite` (
 # Data for table "bite"
 #
 
-INSERT INTO `bite` VALUES (1,'18','fredowinz23','2017-08-13 18:46:09'),(2,'17','fredowinz23','2017-08-13 18:47:52'),(3,'16','fredowinz23','2017-08-13 18:48:07'),(4,'15','fredowinz23','2017-08-13 18:48:58'),(5,'11','fredowinz23','2017-08-13 18:49:06'),(6,'10','fredowinz23','2017-08-13 18:50:59'),(7,'17','admin','2017-08-13 22:18:12'),(8,'20','admin','2017-08-13 22:18:23'),(9,'16','admin','2017-08-16 19:15:02'),(10,'16','admin','2017-08-16 19:15:02'),(11,'19','admin','2017-08-16 19:15:07'),(12,'18','admin','2017-08-16 19:19:03'),(13,'12','admin','2017-08-16 19:19:30'),(14,'1','admin','2017-08-16 22:09:23'),(15,'2','admin','2017-08-16 22:48:07');
+INSERT INTO `bite` VALUES (1,'18','fredowinz23','2017-08-13 18:46:09'),(2,'17','fredowinz23','2017-08-13 18:47:52'),(3,'16','fredowinz23','2017-08-13 18:48:07'),(4,'15','fredowinz23','2017-08-13 18:48:58'),(5,'11','fredowinz23','2017-08-13 18:49:06'),(6,'10','fredowinz23','2017-08-13 18:50:59'),(7,'17','admin','2017-08-13 22:18:12'),(8,'20','admin','2017-08-13 22:18:23'),(9,'16','admin','2017-08-16 19:15:02'),(10,'16','admin','2017-08-16 19:15:02'),(11,'19','admin','2017-08-16 19:15:07'),(12,'18','admin','2017-08-16 19:19:03'),(13,'12','admin','2017-08-16 19:19:30'),(14,'1','admin','2017-08-16 22:09:23'),(15,'2','admin','2017-08-16 22:48:07'),(16,'3','admin','2017-08-16 23:31:16'),(17,'4','admin','2017-08-16 23:32:35');
 
 #
 # Structure for table "comment"
@@ -121,7 +121,7 @@ CREATE TABLE `notification` (
 # Data for table "notification"
 #
 
-INSERT INTO `notification` VALUES (1,'admin','fredowinz23','followed you!','follow','','2017-08-16 22:57:18'),(2,'admin','fredowinz23','Nice!','comment','','2017-08-16 22:57:39'),(3,'admin','fredowinz23','Nice!','bite','','2017-08-16 22:57:47'),(4,'admin','fredowinz23','Nice!','join','','2017-08-16 22:57:52');
+INSERT INTO `notification` VALUES (1,'admin','fredowinz23','followed you!','follow','','2017-08-16 22:57:18'),(2,'admin','fredowinz23','Nice!','comment','','2017-08-16 22:57:39'),(3,'admin','fredowinz23','Nice!','bite','','2017-08-16 22:57:47'),(4,'admin','fredowinz23','Nice!','join','','2017-08-16 22:57:52'),(13,'','admin','Your post has a bite from admin','bite',NULL,'2017-08-16 23:31:16'),(14,'admin','admin','Your post has a bite from admin','bite',NULL,'2017-08-16 23:32:35');
 
 #
 # Structure for table "user"

@@ -35,10 +35,17 @@ function bite()
 {
 	$Id = $_GET['Id'];
 	$username = $_GET['username'];
+	$doer = getDoer($Id);
 	
 	
 	mysql_query("insert into bite set biter='$username',
 											post_id=$Id,
+											create_datetime=NOW()");
+											
+	mysql_query("insert into notification set doer='$username',
+											receiver='$doer',
+											message='Your post has a bite from $username',
+											type='bite',
 											create_datetime=NOW()");
 							
 		
