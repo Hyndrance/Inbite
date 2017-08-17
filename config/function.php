@@ -32,7 +32,16 @@ function joinByYou($username, $Id){
 function countJoins($Id){
 	$query = mysql_query("select * from join_now where post_id=$Id");
 	return mysql_num_rows($query);
+}
 
+function countFollowing($username){
+	$query = mysql_query("select * from follow where follower='$username'");
+	return mysql_num_rows($query);
+}
+
+function countFollowers($username){
+	$query = mysql_query("select * from follow where following='$username'");
+	return mysql_num_rows($query);
 }
 
 function getDoer($postId){

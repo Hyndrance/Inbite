@@ -32,9 +32,6 @@ else
     <!-- Bootstrap Core Css -->
     <link href="../include/md/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Light Gallery Plugin Css -->
-    <link href="../include/md/plugins/light-gallery/css/lightgallery.css" rel="stylesheet">
-	
 	<!-- Multi Select Css -->
 	<link href="../include/md/plugins/multi-select/css/multi-select.css" rel="stylesheet">
 	
@@ -67,6 +64,7 @@ else
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../include/md/css/themes/all-themes.css" rel="stylesheet" />
+
 </head>
 
 <body class="theme-green">
@@ -266,12 +264,14 @@ else
                         <a href="../follow/?view=follower">
                             <i class="material-icons">home</i>
                             <span>Followers</span>
+                            <span><?=countFollowers($username);?></span>
                         </a>
                     </li>
                     <li>
                         <a href="../follow/?view=following">
                             <i class="material-icons">home</i>
                             <span>Following</span>
+                            <span><?=countFollowing($username);?></span>
                         </a>
                     </li>
             </div>
@@ -279,7 +279,7 @@ else
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2017 - 2018 <a href="javascript:void(0);">Inbite Powered by Hydnrance</a>.
+                    &copy; 2017 - 2018 <a href="javascript:void(0);">Inbite Powered by Hyndrance</a>.
                 </div>
                 <div class="version">
                     <b>Version: </b> 0.0.1
@@ -340,7 +340,6 @@ else
     <!-- Demo Js -->
     <script src="../include/md/js/demo.js"></script>
 	
-	
     <!-- Light Gallery Plugin Js -->
     <script src="../include/md/plugins/light-gallery/js/lightgallery-all.js"></script>
 
@@ -364,10 +363,6 @@ else
 
     <!-- noUISlider Plugin Js -->
     <script src="../include/md/plugins/nouislider/nouislider.js"></script>
-
-    <!-- Custom Js -->
-    <script src="../include/md/js/admin.js"></script>
-    <script src="../include/md/js/pages/forms/advanced-form-elements.js"></script>
 
 </body>
 </html>

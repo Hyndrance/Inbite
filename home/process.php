@@ -56,10 +56,17 @@ function join_now()
 {
 	$Id = $_GET['Id'];
 	$username = $_GET['username'];
+	$doer = getDoer($Id);
 	
 	
 	mysql_query("insert into join_now set user='$username',
 											post_id=$Id,
+											create_datetime=NOW()");
+											
+	mysql_query("insert into notification set doer='$username',
+											receiver='$doer',
+											message='$username joined your post',
+											type='join',
 											create_datetime=NOW()");
 							
 		
