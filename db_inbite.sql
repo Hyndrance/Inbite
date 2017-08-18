@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2017-08-16 23:33:05
+# Date: 2017-08-18 21:19:19
 # Generator: MySQL-Front 6.0  (Build 1.159)
 
 
@@ -16,13 +16,13 @@ CREATE TABLE `activity` (
   `location` varchar(255) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "activity"
 #
 
-INSERT INTO `activity` VALUES (2,'admin','try me!','1502894266.jpg','bacolod','2017-08-16 22:37:46'),(3,'admin','hehe','1502897473.jpg','bacolod','2017-08-16 23:31:12'),(4,'admin','hahaha','1502897552.jpg','bacolod','2017-08-16 23:32:31');
+INSERT INTO `activity` VALUES (1,'admin','check again bala','1503056699.jpg','bacolod','2017-08-18 19:51:11'),(2,'admin','check me now later','1503056711.jpg','bacolod','2017-08-18 20:05:45'),(3,'admin','hehe','1503057021.jpg','bacolod','2017-08-18 19:50:21'),(4,'','baket nga ba','1503057036.jpg','bacolod','2017-08-18 20:04:27'),(5,'hahah','yut','1503058862.jpg','bacolod','2017-08-18 20:21:02');
 
 #
 # Structure for table "bite"
@@ -35,13 +35,13 @@ CREATE TABLE `bite` (
   `biter` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "bite"
 #
 
-INSERT INTO `bite` VALUES (1,'18','fredowinz23','2017-08-13 18:46:09'),(2,'17','fredowinz23','2017-08-13 18:47:52'),(3,'16','fredowinz23','2017-08-13 18:48:07'),(4,'15','fredowinz23','2017-08-13 18:48:58'),(5,'11','fredowinz23','2017-08-13 18:49:06'),(6,'10','fredowinz23','2017-08-13 18:50:59'),(7,'17','admin','2017-08-13 22:18:12'),(8,'20','admin','2017-08-13 22:18:23'),(9,'16','admin','2017-08-16 19:15:02'),(10,'16','admin','2017-08-16 19:15:02'),(11,'19','admin','2017-08-16 19:15:07'),(12,'18','admin','2017-08-16 19:19:03'),(13,'12','admin','2017-08-16 19:19:30'),(14,'1','admin','2017-08-16 22:09:23'),(15,'2','admin','2017-08-16 22:48:07'),(16,'3','admin','2017-08-16 23:31:16'),(17,'4','admin','2017-08-16 23:32:35');
+INSERT INTO `bite` VALUES (1,'4','user','2017-08-17 22:55:02'),(2,'1','admin','2017-08-18 19:51:19'),(3,'2','admin','2017-08-18 19:51:38'),(4,'5','admin','2017-08-18 20:31:04');
 
 #
 # Structure for table "comment"
@@ -74,13 +74,13 @@ CREATE TABLE `follow` (
   `following` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "follow"
 #
 
-INSERT INTO `follow` VALUES (3,'admin','fredowinz23','2017-08-12 21:01:40'),(4,'fredowinz23','admin','2017-08-13 17:05:19');
+INSERT INTO `follow` VALUES (1,'hahah','admin','2017-08-18 20:45:44');
 
 #
 # Structure for table "join_now"
@@ -93,13 +93,13 @@ CREATE TABLE `join_now` (
   `user` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "join_now"
 #
 
-INSERT INTO `join_now` VALUES (1,'2','admin','2017-08-16 22:47:00');
+INSERT INTO `join_now` VALUES (1,'4','user','2017-08-17 22:55:08'),(2,'4','admin','2017-08-18 20:08:56'),(3,'2','admin','2017-08-18 20:09:03'),(4,'3','admin','2017-08-18 20:10:21');
 
 #
 # Structure for table "notification"
@@ -115,13 +115,13 @@ CREATE TABLE `notification` (
   `link` varchar(255) DEFAULT NULL,
   `create_datetime` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "notification"
 #
 
-INSERT INTO `notification` VALUES (1,'admin','fredowinz23','followed you!','follow','','2017-08-16 22:57:18'),(2,'admin','fredowinz23','Nice!','comment','','2017-08-16 22:57:39'),(3,'admin','fredowinz23','Nice!','bite','','2017-08-16 22:57:47'),(4,'admin','fredowinz23','Nice!','join','','2017-08-16 22:57:52'),(13,'','admin','Your post has a bite from admin','bite',NULL,'2017-08-16 23:31:16'),(14,'admin','admin','Your post has a bite from admin','bite',NULL,'2017-08-16 23:32:35');
+INSERT INTO `notification` VALUES (1,'hahah','admin','Your post has a bite from admin','bite',NULL,'2017-08-18 20:31:04'),(2,'admin','hahah','hahah followed you','follow',NULL,'2017-08-18 20:45:44');
 
 #
 # Structure for table "user"
@@ -134,7 +134,7 @@ CREATE TABLE `user` (
   `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT 'no-image',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
@@ -142,4 +142,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'Inbite Admin','admin','support@inbite.com','12345','1502892528.png'),(2,'fred ciagar','user',NULL,'12345',NULL),(3,'hehehe','hahah',NULL,'12345',NULL),(5,'admi','admi',NULL,'123',NULL),(6,'dskifndslif nldskfndsklfnsdklfsdnlk','correctuser',NULL,'12121212',NULL),(7,'james reid','james23',NULL,'123456',NULL),(8,'dsklfjsdlk jdsklfj sdklfjs fj','sddfdsfs','aa@aa.com','12121212',NULL),(9,'dsklfndskl ndsfklns kls','dsklfnsdklfj sdklfnsdklsdnklfn lsdk','ww@ww.com','123456',NULL),(10,'sklfjdskl ksdlfjdsklfj sdkl','gggg','ff@ff.com','123456',NULL),(11,'fred garcia','fredowinz23','fred@garcia.com','12345',NULL);
+INSERT INTO `user` VALUES (1,'Inbite Admin','admin','support@inbite.com','12345','1502892528.png'),(2,'fred ciagar','user',NULL,'12345',NULL),(3,'hehehe','hahah','','12345','1503058850.jpg'),(5,'admi','admi',NULL,'123',NULL),(6,'dskifndslif nldskfndsklfnsdklfsdnlk','correctuser',NULL,'12121212',NULL),(7,'james reid','james23',NULL,'123456',NULL),(8,'dsklfjsdlk jdsklfj sdklfjs fj','sddfdsfs','aa@aa.com','12121212',NULL),(9,'dsklfndskl ndsfklns kls','dsklfnsdklfj sdklfnsdklsdnklfn lsdk','ww@ww.com','123456',NULL),(10,'sklfjdskl ksdlfjdsklfj sdkl','gggg','ff@ff.com','123456',NULL),(11,'fred garcia','fredowinz23','fred@garcia.com','12345',NULL);
