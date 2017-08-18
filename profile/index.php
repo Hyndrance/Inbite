@@ -10,6 +10,11 @@ switch ($view) {
 		$content 	= 'update.php';
 		$template	= '../include/template.php';
 		break;
+		
+	case 'searchResult' :
+		$content 	= 'searchResult.php';
+		$template	= '../include/template.php';
+		break;
 			
 	default :
 		$content 	= 'profile.php';

@@ -80,6 +80,12 @@ function follow()
 	mysql_query("insert into follow set follower='$follower',
 										following='$following',
 											create_datetime=NOW()");
+											
+	mysql_query("insert into notification set doer='$follower',
+											receiver='$following',
+											message='$follower followed you',
+											type='follow',
+											create_datetime=NOW()");
 							
 		
 	header('Location: ../profile/?user='.$following);

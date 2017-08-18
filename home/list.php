@@ -25,17 +25,23 @@ $Id = $row['Id'];
 				<?=$row['post']?></br>
 					<small>Posted by - <a href="../profile/?user=<?=$row['user'];?>" ><?=$row['user'];?></a></small>
 			</h2>
+			<?php
+			if ($username == $row['user']){
+			?>
 			<ul class="header-dropdown m-r--5">
 				<li class="dropdown">
 					<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						<i class="material-icons">more_vert</i>
 					</a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="javascript:void(0);">Update</a></li>
+						<li><a href="?view=update&id=<?=$Id;?>">Update</a></li>
 						<li><a href="process.php?action=delete&id=<?=$Id;?>">Delete</a></li>
 					</ul>
 				</li>
 			</ul>
+			<?php
+			}
+			?>
 		</div>
 		<div class="body">
 				<img src="../media/<?=$row['image']?>" class="js-animating-object img-responsive">

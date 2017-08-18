@@ -93,7 +93,10 @@ else
         <div class="search-icon">
             <i class="material-icons">search</i>
         </div>
-        <input type="text" placeholder="START TYPING...">
+		<form action="../profile/" method="GET">
+        <input type="text" name="search" placeholder="START TYPING...">
+		<input type="hidden" name="view" value="searchResult">
+		</form>
         <div class="close-search">
             <i class="material-icons">close</i>
         </div>

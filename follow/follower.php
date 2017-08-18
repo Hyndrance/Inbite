@@ -27,8 +27,8 @@ $ActQuery = mysql_query("select *  from follow where following='$username'");
 				<?php
 						while($ActRow=mysql_fetch_array($ActQuery)){
 						
-						if(file_exists("../media/".$ActRow['follower']) && $ActRow['follower']!="")
-							$galImage = "../media/".$ActRow['follower'];
+						if(file_exists("../media/".getImage($ActRow['follower'])))
+							$galImage = "../media/".getImage($ActRow['follower']);
 						else
 							$galImage = "../include/images/no-image.jpg";
 

@@ -16,6 +16,11 @@ switch ($view) {
 		$template	= '../include/template.php';
 		break;
 	
+	case 'update' :
+		$content 	= 'update.php';
+		$template	= '../include/template.php';
+		break;
+	
 	case 'test' :
 		$content 	= 'test.php';
 		$template	= '../include/template.php';

@@ -16,6 +16,10 @@ switch ($action) {
 		addComment();
 		break;
 		
+	case 'update':
+		update();
+		break;
+		
 	case 'delete':
 		delete();
 		break;
@@ -35,7 +39,7 @@ function bite()
 {
 	$Id = $_GET['Id'];
 	$username = $_GET['username'];
-	$doer = getDoer($Id);
+	$receiver = getReceiver($Id);
 	
 	
 	mysql_query("insert into bite set biter='$username',
@@ -43,7 +47,7 @@ function bite()
 											create_datetime=NOW()");
 											
 	mysql_query("insert into notification set doer='$username',
-											receiver='$doer',
+											receiver='$receiver',
 											message='Your post has a bite from $username',
 											type='bite',
 											create_datetime=NOW()");
@@ -56,7 +60,7 @@ function join_now()
 {
 	$Id = $_GET['Id'];
 	$username = $_GET['username'];
-	$doer = getDoer($Id);
+	$receiver = getReceiver($Id);
 	
 	
 	mysql_query("insert into join_now set user='$username',
@@ -64,7 +68,7 @@ function join_now()
 											create_datetime=NOW()");
 											
 	mysql_query("insert into notification set doer='$username',
-											receiver='$doer',
+											receiver='$receiver',
 											message='$username joined your post',
 											type='join',
 											create_datetime=NOW()");
@@ -104,6 +108,20 @@ function add()
 	}
 	
 }
+
+function update()
+{
+	$id = $_GET['id'];
+	$post = $_POST['post'];
+	
+	mysql_query("update activity set post='$post',
+									create_datetime=NOW()
+									where Id=$id");
+										
+	header('Location: ../home/#'.$id);
+	
+}
+
 function addComment()
 {
 	$post_id = $_POST['post_id'];

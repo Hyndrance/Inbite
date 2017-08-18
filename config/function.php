@@ -44,7 +44,7 @@ function countFollowers($username){
 	return mysql_num_rows($query);
 }
 
-function getDoer($postId){
+function getReceiver($postId){
 	$query = mysql_query("select * from activity where id=$postId");
 	$get = mysql_fetch_array($query);
 	return $get['user'];
