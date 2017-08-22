@@ -82,30 +82,31 @@ function add()
 	$description = $_POST['description'];
 	$username = $_POST['username'];
 	
+	$data = $_POST['upload_file'];
+
+	list($type, $data) = explode(';', $data);
+	list(, $data)      = explode(',', $data);
+	$data = base64_decode($data);
+	
 	// Where the file is going to be placed 
 	$target_path = "../media/";
 
-	/* Add the original filename to our target path.  
-	Result is "uploads/filename.extension" */
-	$target_path = $target_path . basename( $_FILES['upload_file']['name']); 
-
-	$temp = explode(".", $_FILES["upload_file"]["name"]);
-	$newfilename = round(microtime(true)) . '.' . end($temp);
+	$newfilename = round(microtime(true)) . '.jpg';
+	
+	file_put_contents($target_path . $newfilename, $data);
 	
 	mysql_query("insert into activity set user='$username',
 											post='$description',
 											image='$newfilename',
 											location='bacolod',
 											create_datetime=NOW()");
+											
+											
+	//get latest id
+	$get = mysql_fetch_array(mysql_query("select * from activity where user='$username' order by id desc limit 1;"));
 							
-	if(move_uploaded_file($_FILES['upload_file']['tmp_name'], "../media/" . $newfilename)) {
 							
-	header('Location: ../home/');
-	}
-	else{
-		
-	header('Location: ../home/?error=Not uploaded');
-	}
+	header('Location: ../home/?view=add_2&id='.$get['Id']);
 	
 }
 

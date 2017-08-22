@@ -37,17 +37,13 @@ $ActQuery = mysql_query("select * from activity where user ='$profile' and image
 
 					$Id = $row['Id'];
 					?>
+					
 						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 							<a href="../media/<?=$galImage?>" data-sub-html="Demo Description">
 								<img class="img-responsive thumbnail" src="../media/<?=$galImage?>">
 							</a>
 							<?=$ActRow['create_datetime']?>
 						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <a href="../../images/image-gallery/1.jpg" data-sub-html="Demo Description">
-                                        <img class="img-responsive thumbnail" src="../../images/image-gallery/thumb/thumb-1.jpg">
-                                    </a>
-                                </div>
 						
 					<?php
 						}

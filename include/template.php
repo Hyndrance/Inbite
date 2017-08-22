@@ -29,35 +29,21 @@ else
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
+       <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
     <!-- Bootstrap Core Css -->
     <link href="../include/md/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-	<!-- Multi Select Css -->
-	<link href="../include/md/plugins/multi-select/css/multi-select.css" rel="stylesheet">
-	
-	<!-- Bootstrap Spinner Css -->
-	<link href="../include/md/plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
-	
-    <!-- Sweetalert Css -->
-    <link href="../include/md/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-	
-	<!-- Bootstrap Tagsinput Css -->
-	<link href="../include/md/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
-	
-	<!-- Bootstrap Select Css -->
-	<link href="../include/md/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
-	
-	<!-- noUISlider Css -->
-	<link href="../include/md/plugins/nouislider/nouislider.min.css" rel="stylesheet">
-	
     <!-- Waves Effect Css -->
     <link href="../include/md/plugins/node-waves/waves.css" rel="stylesheet" />
 
     <!-- Animation Css -->
     <link href="../include/md/plugins/animate-css/animate.css" rel="stylesheet" />
 
-    <!-- Morris Chart Css-->
-    <link href="../include/md/plugins/morrisjs/morris.css" rel="stylesheet" />
+    <!-- Sweet Alert Css -->
+    <link href="../include/md/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="../include/md/css/style.css" rel="stylesheet">
@@ -134,84 +120,7 @@ else
                         </ul>
                     </li>
                     <!-- #END# Notifications -->
-                    <!-- Tasks -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            <i class="material-icons">flag</i>
-                            <span class="label-count">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">TASKS</li>
-                            <li class="body">
-                                <ul class="menu tasks">
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <h4>
-                                                Footer display issue
-                                                <small>32%</small>
-                                            </h4>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-pink" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 32%">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <h4>
-                                                Make new buttons
-                                                <small>45%</small>
-                                            </h4>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-cyan" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <h4>
-                                                Create new dashboard
-                                                <small>54%</small>
-                                            </h4>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 54%">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <h4>
-                                                Solve transition issue
-                                                <small>65%</small>
-                                            </h4>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <h4>
-                                                Answer GitHub questions
-                                                <small>92%</small>
-                                            </h4>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 92%">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="javascript:void(0);">View All Tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- #END# Tasks -->
+                    
                     <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
                 </ul>
             </div>
@@ -295,13 +204,18 @@ else
 
     <section class="content">
         <div class="container-fluid">
- 
-		<?php include $content;?>
+		
+            <div class="block-header">
+			
+				<?php include $content;?>
+				
+				
+            </div>
  
         </div>
     </section>
 
-    <!-- Jquery Core Js -->
+       <!-- Jquery Core Js -->
     <script src="../include/md/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
@@ -313,59 +227,24 @@ else
     <!-- Slimscroll Plugin Js -->
     <script src="../include/md/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
+    <!-- Jquery Validation Plugin Css -->
+    <script src="../include/md/plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- JQuery Steps Plugin Js -->
+    <script src="../include/md/plugins/jquery-steps/jquery.steps.js"></script>
+
+    <!-- Sweet Alert Plugin Js -->
+    <script src="../include/md/plugins/sweetalert/sweetalert.min.js"></script>
+
     <!-- Waves Effect Plugin Js -->
     <script src="../include/md/plugins/node-waves/waves.js"></script>
 
-    <!-- Jquery CountTo Plugin Js -->
-    <script src="../include/md/plugins/jquery-countto/jquery.countTo.js"></script>
-
-    <!-- Morris Plugin Js -->
-    <script src="../include/md/plugins/raphael/raphael.min.js"></script>
-    <script src="../include/md/plugins/morrisjs/morris.js"></script>
-
-    <!-- ChartJs -->
-    <script src="../include/md/plugins/chartjs/Chart.bundle.js"></script>
-
-    <!-- Flot Charts Plugin Js -->
-    <script src="../include/md/plugins/flot-charts/jquery.flot.js"></script>
-    <script src="../include/md/plugins/flot-charts/jquery.flot.resize.js"></script>
-    <script src="../include/md/plugins/flot-charts/jquery.flot.pie.js"></script>
-    <script src="../include/md/plugins/flot-charts/jquery.flot.categories.js"></script>
-    <script src="../include/md/plugins/flot-charts/jquery.flot.time.js"></script>
-
-    <!-- Sparkline Chart Plugin Js -->
-    <script src="../include/md/plugins/jquery-sparkline/jquery.sparkline.js"></script>
-
     <!-- Custom Js -->
     <script src="../include/md/js/admin.js"></script>
-    <script src="../include/md/js/pages/index.js"></script>
+    <script src="../include/md/js/pages/forms/form-wizard.js"></script>
 
     <!-- Demo Js -->
     <script src="../include/md/js/demo.js"></script>
-	
-    <!-- Light Gallery Plugin Js -->
-    <script src="../include/md/plugins/light-gallery/js/lightgallery-all.js"></script>
-
-    <!-- Bootstrap Colorpicker Js -->
-    <script src="../include/md/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
-
-    <!-- Dropzone Plugin Js -->
-    <script src="../include/md/plugins/dropzone/dropzone.js"></script>
-
-    <!-- Input Mask Plugin Js -->
-    <script src="../include/md/plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
-
-    <!-- Multi Select Plugin Js -->
-    <script src="../include/md/plugins/multi-select/js/jquery.multi-select.js"></script>
-
-    <!-- Jquery Spinner Plugin Js -->
-    <script src="../include/md/plugins/jquery-spinner/js/jquery.spinner.js"></script>
-
-    <!-- Bootstrap Tags Input Plugin Js -->
-    <script src="../include/md/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
-
-    <!-- noUISlider Plugin Js -->
-    <script src="../include/md/plugins/nouislider/nouislider.js"></script>
 
 </body>
 </html>

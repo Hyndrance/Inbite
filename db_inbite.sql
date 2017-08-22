@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.16-MariaDB)
-# Date: 2017-08-18 21:19:19
+# Date: 2017-08-22 22:08:14
 # Generator: MySQL-Front 6.0  (Build 1.159)
 
 
@@ -16,13 +16,13 @@ CREATE TABLE `activity` (
   `location` varchar(255) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "activity"
 #
 
-INSERT INTO `activity` VALUES (1,'admin','check again bala','1503056699.jpg','bacolod','2017-08-18 19:51:11'),(2,'admin','check me now later','1503056711.jpg','bacolod','2017-08-18 20:05:45'),(3,'admin','hehe','1503057021.jpg','bacolod','2017-08-18 19:50:21'),(4,'','baket nga ba','1503057036.jpg','bacolod','2017-08-18 20:04:27'),(5,'hahah','yut','1503058862.jpg','bacolod','2017-08-18 20:21:02');
+INSERT INTO `activity` VALUES (1,'admin','check again bala','1503056699.jpg','bacolod','2017-08-18 19:51:11'),(2,'admin','check me now later','1503056711.jpg','bacolod','2017-08-18 20:05:45'),(4,'','baket nga ba','1503057036.jpg','bacolod','2017-08-18 20:04:27'),(5,'hahah','yut','1503058862.jpg','bacolod','2017-08-18 20:21:02'),(6,'admin','Description','1503407045.','bacolod','2017-08-22 21:04:05'),(7,'admin','Description','1503407111.','bacolod','2017-08-22 21:05:10'),(8,'admin','Description','1503408312.','bacolod','2017-08-22 21:25:11'),(9,'admin','Description','1503408354.','bacolod','2017-08-22 21:25:53'),(10,'admin','Description','1503409929.jpg','bacolod','2017-08-22 21:52:09'),(11,'admin','Description','1503410006.jpg','bacolod','2017-08-22 21:53:25'),(12,'admin','Description dsfklhsdfkl','1503410428.jpg','bacolod','2017-08-22 22:01:12'),(14,'admin','Description','1503410839.jpg','bacolod','2017-08-22 22:07:22');
 
 #
 # Structure for table "bite"
@@ -35,13 +35,13 @@ CREATE TABLE `bite` (
   `biter` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "bite"
 #
 
-INSERT INTO `bite` VALUES (1,'4','user','2017-08-17 22:55:02'),(2,'1','admin','2017-08-18 19:51:19'),(3,'2','admin','2017-08-18 19:51:38'),(4,'5','admin','2017-08-18 20:31:04');
+INSERT INTO `bite` VALUES (1,'4','user','2017-08-17 22:55:02'),(2,'1','admin','2017-08-18 19:51:19'),(3,'2','admin','2017-08-18 19:51:38'),(4,'5','admin','2017-08-18 20:31:04'),(5,'4','admin','2017-08-19 21:44:35');
 
 #
 # Structure for table "comment"
@@ -74,13 +74,13 @@ CREATE TABLE `follow` (
   `following` varchar(20) DEFAULT NULL,
   `create_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "follow"
 #
 
-INSERT INTO `follow` VALUES (1,'hahah','admin','2017-08-18 20:45:44');
+INSERT INTO `follow` VALUES (1,'hahah','admin','2017-08-18 20:45:44'),(2,'admin','user','2017-08-19 22:30:01');
 
 #
 # Structure for table "join_now"
@@ -115,13 +115,13 @@ CREATE TABLE `notification` (
   `link` varchar(255) DEFAULT NULL,
   `create_datetime` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "notification"
 #
 
-INSERT INTO `notification` VALUES (1,'hahah','admin','Your post has a bite from admin','bite',NULL,'2017-08-18 20:31:04'),(2,'admin','hahah','hahah followed you','follow',NULL,'2017-08-18 20:45:44');
+INSERT INTO `notification` VALUES (1,'hahah','admin','Your post has a bite from admin','bite',NULL,'2017-08-18 20:31:04'),(2,'admin','hahah','hahah followed you','follow',NULL,'2017-08-18 20:45:44'),(3,'','admin','Your post has a bite from admin','bite',NULL,'2017-08-19 21:44:36'),(4,'user','admin','admin followed you','follow',NULL,'2017-08-19 22:30:01');
 
 #
 # Structure for table "user"
