@@ -128,11 +128,18 @@ function addComment()
 	$post_id = $_POST['post_id'];
 	$content = $_POST['content'];
 	$username = $_POST['username'];
+	$receiver = getReceiver($post_id);
 	
 	
 	mysql_query("insert into comment set user='$username',
 											post_id='$post_id',
 											content='$content',
+											create_datetime=NOW()");
+											
+	mysql_query("insert into notification set doer='$username',
+											receiver='$receiver',
+											message='$username has commented on your post.',
+											type='comment',
 											create_datetime=NOW()");
 							
 		
