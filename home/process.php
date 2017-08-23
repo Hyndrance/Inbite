@@ -136,7 +136,7 @@ function addComment()
 											create_datetime=NOW()");
 							
 		
-	header('Location: ../home/');
+	header('Location: ../home/?view=comment&id='.$post_id);
 	
 	
 }

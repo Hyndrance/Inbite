@@ -23,7 +23,7 @@ $Id = $row['Id'];
 		<div class="header bg-green">
 			<h2>
 				<?=$row['post']?></br>
-					<small>Posted by - <a href="../profile/?user=<?=$row['user'];?>" ><?=$row['user'];?></a></small>
+					<small>Posted by - <a href="../profile/?user=<?=$row['user'];?>" ><?=$row['user'];?></a><br> <?=$row['create_datetime'];?></small>
 			</h2>
 			<?php
 			if ($username == $row['user']){
@@ -44,7 +44,7 @@ $Id = $row['Id'];
 			?>
 		</div>
 		<div class="body">
-				<img src="../media/<?=$row['image']?>" class="js-animating-object img-responsive">
+				<img src="../media/<?=$row['image']?>" class="js-animating-object img-responsive" style="margin: 0 auto;">
 		</div>
 		<div style="width: 80%; height: 1px; background-color: #c2c2c2; margin: 0 auto; margin-bottom: 10px;"></div>
 
@@ -68,16 +68,29 @@ $Id = $row['Id'];
 								&nbsp;<?=countJoins($Id)?> Join(s)</div>
 		</div>
 
-		<div class="input-group" style="width: 80%; margin: 0 auto;">
+		
+		<form action="process.php?action=addComment" method="POST">
+			<div class="input-group" style="width: 80%; margin: 0 auto;">
 						<div class="form-line">
-							<input type="text" class="form-control date" placeholder="Add comment...">
+						
+							<input type="hidden" name="post_id" value="<?=$Id;?>">
+							<input type="hidden" name="username" value="<?=$username;?>">
+							<input type="text" name="content" class="form-control date" placeholder="Add comment...">
 						</div>
 						<span class="input-group-addon">
-							<i class="material-icons"style="cursor:pointer;">send</i>
+									<button type="submit" class="material-icons"style="cursor:pointer; border: none; background: transparent;">send</button>
 						</span>
-		</div>
+			</div>
+		</form>
 
-		<div style="width: 80%; margin: 0 auto; height: 40px; text-align:center; margin-top: 20px;">View comments</div>
+		<div style="width: 80%; margin: 0 auto; height: 40px; text-align:center; margin-top: 20px;">
+		<?php if(countComments($Id)>0) {?>
+			<a href="?view=comment&id=<?=$Id;?>">View <?=countComments($Id);?> Comment(s)</a>
+		<?php } else { ?>
+		No comments
+		<?php }?>
+			
+		</div>
 	</div>
 </div>
      

@@ -34,6 +34,12 @@ function countJoins($Id){
 	return mysql_num_rows($query);
 }
 
+
+function countComments($Id){
+	$query = mysql_query("select * from comment where post_id=$Id");
+	return mysql_num_rows($query);
+}
+
 function countFollowing($username){
 	$query = mysql_query("select * from follow where follower='$username'");
 	return mysql_num_rows($query);
