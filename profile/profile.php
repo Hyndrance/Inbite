@@ -35,12 +35,12 @@ $row = mysql_fetch_array($query);
 					<div class="profile-userbuttons">
 								<?php if(!checkFollow($username, $row['username'])){?>
 								
-								<button type="button" onclick="location.href='process.php?action=follow&follower=<?=$username?>&following=<?=$row['username']?>'" class="btn btn-circle green btn-sm">Follow</button>
+								<button type="button" onclick="location.href='process.php?action=follow&follower=<?=$username?>&following=<?=$row['username']?>'" class="btn btn-circle btn-sm" style="background-color: #FF831E; color: white;">Follow</button>
 								<?php } else {?>
 								
-								<button type="button" onclick="location.href='process.php?action=unfollow&follower=<?=$username?>&following=<?=$row['username']?>'" class="btn btn-circle green btn-sm">Following</button>
+								<button type="button" onclick="location.href='process.php?action=unfollow&follower=<?=$username?>&following=<?=$row['username']?>'" class="btn btn-circle btn-sm">Following</button>
 								<?php }?>
-						<button type="button" class="btn btn-circle red btn-sm">Message</button>
+						<button type="button" class="btn btn-circle green btn-sm">Message</button>
 					</div>
 					<!-- END SIDEBAR BUTTONS -->
 					<?php }?>

@@ -15,6 +15,10 @@ switch ($action) {
 		personalInformation();
 		break;
     
+	case 'interest' :
+		interest();
+		break;
+    
 	case 'updateImage' :
 		updateImage();
 		break;
@@ -111,6 +115,22 @@ function personalInformation()
 
 	mysql_query("update user  set email='$email',
 								full_name='$full_name'
+								where username='$username'");
+			
+		header('Location: ../profile/');
+						
+}
+
+function interest()
+{
+	$food = $_POST['food'];
+	$drinks = $_POST['drinks'];
+	$places = $_POST['places'];
+	$username = $_POST['username'];
+
+	mysql_query("update user  set food='$food',
+								drinks='$drinks',
+								places='$places'
 								where username='$username'");
 			
 		header('Location: ../profile/');

@@ -53,8 +53,10 @@
         <div class="image-size-label">
           Resize image
         </div>
-        <input type="range" class="cropit-image-zoom-input">
-        <input type="hidden" name="username" value="<?=$username?>" />
+		<div style="width: 25%;">
+			<input type="range" class="cropit-image-zoom-input">
+		</div>
+		<input type="hidden" name="username" value="<?=$username?>" />
         <input type="hidden" name="description" value="Description" />
         <input type="hidden" name="upload_file" class="hidden-image-data" />
 		<button align="left" type="submit" class="btn btn-primary btn-lg m-l-15 waves-effect">CROP</button>

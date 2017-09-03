@@ -28,6 +28,20 @@ else{
 
 $Id = $row['Id'];
 ?>
+
+<style>
+.edit-btn{
+	width: 25px;
+	height: 25px;
+	background-color: #c2c2c2;
+	border:none;
+}	
+.edit-btn:hover {
+	background-color: #a9a8a8;
+}
+
+</style>
+
 <div class="col-md-4">
 	<div class="mt-widget-2">
 		<div class="mt-head" style="background-image: url(<?=$postImage?>);">
@@ -36,12 +50,15 @@ $Id = $row['Id'];
 			<?php
 			if ($username == $row['user']){
 			?>
-				<button type="button" onclick="location.href='?view=update&id=<?=$Id;?>'" class="btn btn-success">Update</button>
+				<button type="button" onclick="location.href='?view=update&id=<?=$Id;?>'" class="edit-btn">
+					<i style="color: white;"class="fa fa-pencil" aria-hidden="true"></i>
+				</button>
 			<?php } ?>
 			</div>
 			<div class="mt-head-user">
 				<div class="mt-head-user-img">
-					<img src="<?=$userImage?>"> </div>
+					<img style="width:50px; height: 50px; border-radius: 50%;" src="<?=$userImage?>"></div>
+					
 				<div class="mt-head-user-info">
 					<span class="mt-user-name">Chris Jagers</span>
 					<span class="mt-user-time">
@@ -61,7 +78,7 @@ $Id = $row['Id'];
 	
 			</p>
 			<ul class="mt-body-stats">
-				<li class="font-green">
+				<li style="color: #FF831E;">
 					<?php if(bittenByYou($username, $Id)){?>
 						<img src="../include/images/inbitecolored.png">
 					<?php } else {?>
@@ -71,11 +88,11 @@ $Id = $row['Id'];
 					<?=countBites($Id)?>
 				</li>
 				
-				<li class="font-yellow">
+				<li style="color: #FF831E;">
 					<?php if(joinByYou($username, $Id)){?>
-						<i class="fa fa-link"></i>
+						<i class="fa fa-beer" ></i>
 					<?php } else {?>
-						<i class="fa fa-link" style="cursor:pointer;" onclick="location.href='process.php?action=join_now&Id=<?=$Id;?>&username=<?=$username;?>'"></i>
+						<i class="fa fa-beer" style="color: #c2c2c2; cursor:pointer;" onclick="location.href='process.php?action=join_now&Id=<?=$Id;?>&username=<?=$username;?>'"></i>
 					<?php }?>
 					
 					<?=countJoins($Id)?>

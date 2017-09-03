@@ -13,10 +13,13 @@
 										<a href="#tab_1_1" data-toggle="tab">Personal Info</a>
 									</li>
 									<li>
-										<a href="#tab_1_2" data-toggle="tab">Change Avatar</a>
+										<a href="#tab_1_2" data-toggle="tab">Interest</a>
 									</li>
 									<li>
-										<a href="#tab_1_3" data-toggle="tab">Gallery</a>
+										<a href="#tab_1_3" data-toggle="tab">Change Avatar</a>
+									</li>
+									<li>
+										<a href="#tab_1_4" data-toggle="tab">Gallery</a>
 									</li>
 								</ul>
 							</div>
@@ -38,8 +41,27 @@
 										</form>
 									</div>
 									<!-- END PERSONAL INFO TAB -->
-									<!-- CHANGE AVATAR TAB -->
+									<!-- INTEREST TAB -->
 									<div class="tab-pane" id="tab_1_2">
+										<form role="form" action="process.php?action=interest" method="POST">
+											<input type="hidden" name="username" value="<?=$username?>">
+											<div class="form-group">
+												<label class="control-label">Food</label>
+												<input type="text" placeholder="<?=$row['food']?>" name="food" class="form-control" /> </div>
+											<div class="form-group">
+												<label class="control-label">Drinks</label>
+												<input type="text" placeholder="<?=$row['drinks']?>" name="drinks" class="form-control" /> </div>
+											<div class="form-group">
+												<label class="control-label">Places</label>
+												<input type="text" placeholder="<?=$row['places']?>" name="places" class="form-control" /> </div>
+											<div class="margiv-top-10">
+												<button type="submit" class="btn green"> Save Changes </button>
+											</div>
+										</form>
+									</div>
+									<!-- END INTEREST TAB -->
+									<!-- CHANGE AVATAR TAB -->
+									<div class="tab-pane" id="tab_1_3">
 										<form action="process.php?action=updateImage" role="form" method="POST"  enctype="multipart/form-data">
 											<div class="form-group">
 												<div class="fileinput fileinput-new" data-provides="fileinput">
@@ -65,7 +87,7 @@
 									<!-- END CHANGE AVATAR TAB -->
 									
 									<!-- PRIVACY SETTINGS TAB -->
-									<div class="tab-pane" id="tab_1_3">
+									<div class="tab-pane" id="tab_1_4">
 										
 										<?php
 
